@@ -5,8 +5,9 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-ui-ht79.vercel.app",
-    methods: ["GET", "POST"]
+    origin: ["https://chat-ui-ht79.vercel.app", "https://chat-ui-3.onrender.com/"],
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
